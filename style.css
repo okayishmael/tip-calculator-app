@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary color */
+  --Strong-cyan: hsl(172, 67%, 45%);
+
+  /* Nutural colors */
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* Mobile Styles */
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  background-color: var(--Light-grayish-cyan);
+}
+
+.header {
+  padding: 2rem 0;
+  text-align: center;
+}
+.app-container {
+  background-color: var(--White);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.bill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 47%);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.tip-label,
+.people-label,
+#bill-label {
+  margin-bottom: 0.5rem;
+  display: block;
+  color: var(--Dark-grayish-cyan);
+}
+
+.tip-button {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.tip-button:hover {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+input[type="number"] {
+  background-color: var(--Very-light-grayish-cyan);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
+  width: 100%;
+  font-family: inherit;
+  color: var(--Very-dark-cyan);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.people-label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.people {
+  margin-bottom: 1.5rem;
+}
+
+.error {
+  border: 2px solid red; /* Highlight the input with a red border */
+}
+
+.error-message {
+  color: red; /* Style for the error message */
+  display: none; /* Initially hide the error message */
+}
+
+.icon-money {
+  padding-left: 1.4rem;
+  background: url("images/icon-dollar.svg") no-repeat left;
+  background-size: 0.8rem;
+}
+.icon-person {
+  padding-left: 1.4rem;
+  background: url("images/icon-person.svg") no-repeat left;
+  background-size: 0.8rem;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.white-text {
+  color: var(--White);
+}
+.dark-gray-cyan {
+  color: var(--Dark-grayish-cyan);
+}
+
+.total-container,
+.tip-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.tip-amount,
+.total-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--Strong-cyan);
+}
+
+.reset-btn {
+  background-color: var(--Dark-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  display: block;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+  }
+}
+
+/* Medium Screens and Desktop Styles */
+@media (min-width: 42rem) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 52rem;
+  }
+
+  .tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 31%);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .results {
+    justify-content: space-between;
+  }
+}
