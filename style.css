@@ -30,6 +30,14 @@ body {
   padding: 2rem 0;
   text-align: center;
 }
+
+h1 {
+  display: none;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
 .app-container {
   background-color: var(--White);
   border-radius: 1rem;
