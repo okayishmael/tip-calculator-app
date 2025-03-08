@@ -23,11 +23,11 @@
     <img src="images/logo.svg" alt="logo">
   </header>
   <main class="container">
+    <section>
+      <div class="app-container">
 
-    <div class="app-container">
+        <div class="calculator">
 
-      <div class="calculator">
-        <form>
           <div class="bill">
             <label id="bill-label" for="bill">Bill</label>
             <input type="number" id="bill" class="icon-money" placeholder="0" aria-describedby="bill-warning" />
@@ -52,31 +52,33 @@
             <input type="number" id="people" class="icon-person" placeholder="0" />
           </div>
 
-        </form>
-      </div>
-      <div class="results">
-        <div class="numbers-results">
-          <div class="tip-container">
-            <div class="tip-amount-label">
-              <p class="white-text">Tip Amount</p>
-              <p class="dark-gray-cyan">/ person</p>
-            </div>
-            <p class="tip-amount"><span id="tip-amount">$0.00</span></p>
-          </div>
-          <div class="total-container">
-            <div class="total-label">
-              <p class="white-text">Total</p>
-              <p class="dark-gray-cyan">/ person</p>
-            </div>
-            <p class="total-amount"><span id="total-amount">$0.00</span></p>
-          </div>
-        </div>
-        <div class="reset-container">
-          <button id="reset-btn" class="reset-btn">Reset</button>
-        </div>
-      </div>
 
-    </div>
+        </div>
+
+        <div class="results">
+          <div class="numbers-results">
+            <div class="tip-container">
+              <div class="tip-amount-label">
+                <p class="white-text">Tip Amount</p>
+                <p class="dark-gray-cyan">/ person</p>
+              </div>
+              <p class="tip-amount"><span id="tip-amount">$0.00</span></p>
+            </div>
+            <div class="total-container">
+              <div class="total-label">
+                <p class="white-text">Total</p>
+                <p class="dark-gray-cyan">/ person</p>
+              </div>
+              <p class="total-amount"><span id="total-amount">$0.00</span></p>
+            </div>
+          </div>
+          <div class="reset-container">
+            <button id="reset-btn" class="reset-btn">Reset</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <script src="calculator.js"></script>
