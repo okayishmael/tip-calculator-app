@@ -168,7 +168,7 @@ input[type="number"] {
 }
 
 .reset-btn {
-  background-color: var(--Dark-grayish-cyan);
+  background-color: var(--Grayish-cyan);
   color: var(--Very-dark-cyan);
   border: none;
   border-radius: 0.5rem;

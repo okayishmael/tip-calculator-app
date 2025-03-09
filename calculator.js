@@ -7,7 +7,7 @@ const errorMessage = document.getElementById("error-message");
 
 function calculateTip(tipPercentage) {
   let billValue = parseFloat(bill.value);
-  let numOfPerson = parseFloat(numberOfPeople.value);
+  let numOfPerson = parseInt(numberOfPeople.value);
 
   // Validate bill value and number of people
 
